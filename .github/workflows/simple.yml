@@ -1,0 +1,22 @@
+#workflow名
+name: Shell Commands
+#イベントトリガー
+#Git push したときにこのワークフローを実行する
+
+on: [push]
+
+jobs:
+#job名
+  run-shell-command:
+    #virtual machineの形式を指定
+    runs-on: ubuntu-latest
+    #jobのステップ
+    steps:
+      #ステップ名
+      - name: echo a string
+        run : echo "Hello World"
+      #ステップ2
+      - name: multiline script
+        run: | #複数のコマンドを実行したいときはパイプを使用する
+          node -V
+          npm -V
