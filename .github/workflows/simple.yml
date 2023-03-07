@@ -14,9 +14,9 @@ jobs:
     steps:
       #ステップ名
       - name: echo a string
-        run : echo "Hello World"
+        run: echo "Hello World"
       #ステップ2
       - name: multiline script
         run: | #複数のコマンドを実行したいときはパイプを使用する
-          node -V
-          npm -V
+          node -v
+          npm -v
